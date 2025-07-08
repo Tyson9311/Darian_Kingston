@@ -50,23 +50,29 @@
 
 ```
 MasterSort_251/
-├── README_MasterSort_251.md
-├── LICENSE
+├── README_MasterSort_251.md        ✅ Project overview
+├── LICENSE                         ✅ MIT License
 │
-├── public/
-│   ├── index.html
-│   ├── gameplay.html
-│   ├── profile.html
-│   ├── leaderboard.html
-│   ├── styles.css
-│   ├── game.js
-│   ├── play.js
-│   ├── profile.js
-│   └── leaderboard.js
+├── public/                         # Static frontend (WebApp)
+│   ├── index.html                  ✅ Home screen
+│   ├── gameplay.html               ✅ Game screen
+│   ├── profile.html                ✅ /mystat profile screen
+│   ├── leaderboard.html            ✅ Global leaderboard screen
+│   ├── styles.css                  ✅ Neon theme styles
+│   ├── game.js                     ✅ Home navigation logic
+│   ├── play.js                     ✅ Game logic (tube pouring, scoring)
+│   ├── profile.js                  ✅ Loads user profile & rarity
+│   └── leaderboard.js              ✅ Fetches and displays top 25
 │
-├── api/
-│   ├── dailybonus.js
-│   └── leaderboard.js
+├── api/                            # Backend API for scoring & bonus
+│   ├── dailybonus.js               ✅ Handles /dailybonus claim logic
+│   └── leaderboard.js              ✅ Handles /leaderboard data fetch/submit
+│
+├── telegram-bot/                   # 🤖 Telegram bot logic folder
+│   └── bot.js                      ✅ Bot code (includes /start, buttons)
+│
+└── (vercel.json)                   ❌ You can skip this unless you need advanced routing
+
 ```
 
 ---
