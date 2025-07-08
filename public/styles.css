@@ -8,15 +8,10 @@ body {
 }
 
 .background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('https://images.unsplash.com/photo-1603039614899-f01fba11f9c0');
+  background-image: url('anime-beach.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.3) blur(2px);
+  filter: brightness(0.6) blur(1px);
   z-index: -1;
 }
 
