@@ -14,7 +14,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('anime-beach.jpg'); /* 👈 Your image here */
+  background-image: url('anime-beach.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.6) blur(1px);
@@ -78,24 +78,41 @@ body {
   margin-top: 20px;
 }
 
-/* Tubes and slots */
+/* 🎯 Rounded, lab-style neon tubes */
 .tube {
-  width: 60px;
-  height: 120px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #00f5ff;
-  border-radius: 10px;
+  width: 70px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 3px solid #00f5ff;
+  border-radius: 30px 30px 10px 10px;
+  padding: 2px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
-  padding: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00f5ff;
 }
 
+/* 🌊 Floating liquid-like slots */
 .tube-slot {
-  flex: 1;
-  margin: 2px 0;
-  border-radius: 3px;
-  border: 1px solid rgba(255,255,255,0.1);
+  height: 25%;
+  width: 100%;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.tube-slot::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  opacity: 0.6;
+  border-radius: 0;
 }
 
 .tube.selected {
@@ -142,4 +159,4 @@ button {
 
 button:hover {
   background: #00e0e0;
-  }
+    }
