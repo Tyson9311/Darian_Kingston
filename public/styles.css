@@ -1,52 +1,145 @@
-/* styles.css */
-
+/* Reset and base styles */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Orbitron', sans-serif;
-  background-color: #0f0f0f;
+  background-color: #000;
   color: #fff;
 }
 
+/* 🌊 Custom anime beach background */
 .background {
-  background-image: url('anime-beach.jpg');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('anime-beach.jpg'); /* 👈 Your image here */
   background-size: cover;
   background-position: center;
   filter: brightness(0.6) blur(1px);
   z-index: -1;
 }
 
+/* Main menu layout */
 .main-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  gap: 20px;
   text-align: center;
-  gap: 1.5rem;
+  z-index: 1;
 }
 
 .neon-title {
   font-size: 3rem;
   color: #00f5ff;
-  text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 30px #00f5ff;
+  text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff;
 }
 
 .neon-btn {
   font-size: 1.1rem;
   padding: 12px 24px;
-  color: #fff;
-  background-color: transparent;
   border: 2px solid #00f5ff;
-  border-radius: 12px;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
   cursor: pointer;
-  text-shadow: 0 0 5px #00f5ff;
-  box-shadow: 0 0 10px #00f5ff inset;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00f5ff;
+  transition: all 0.3s;
 }
 
 .neon-btn:hover {
-  background-color: #00f5ff;
+  background: #00f5ff;
   color: #000;
-  text-shadow: none;
   box-shadow: 0 0 20px #00f5ff;
 }
+
+/* Game screen */
+#game-screen {
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+#level-info {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Tube grid */
+.tube-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Tubes and slots */
+.tube {
+  width: 60px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00f5ff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  padding: 4px;
+}
+
+.tube-slot {
+  flex: 1;
+  margin: 2px 0;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tube.selected {
+  outline: 3px solid yellow;
+}
+
+/* Timer bar */
+.timer-bar {
+  width: 80%;
+  height: 10px;
+  background: #333;
+  margin: 10px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#timer-fill {
+  height: 100%;
+  width: 100%;
+  background: lime;
+  transition: width 1s linear;
+}
+
+/* Win / Lose Screens */
+#winScreen, #loseScreen {
+  margin-top: 20px;
+}
+
+#winScreen h2, #loseScreen h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  background: #00f5ff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #00e0e0;
+  }
