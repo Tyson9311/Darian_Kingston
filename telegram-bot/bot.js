@@ -27,7 +27,7 @@ Use these commands:
       inline_keyboard: [[
         {
           text: "🚀 Play Now",
-          web_app: { url: "https://your-vercel-url.vercel.app" }
+          web_app: { url: "https://darian-kingston.vercel.app/" }
         }
       ]]
     }
