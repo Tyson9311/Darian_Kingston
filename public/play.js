@@ -1,7 +1,19 @@
-
-// âœ… Updated play.js with tap-based selection + pour animation
 let currentLevel = parseInt(new URLSearchParams(window.location.search).get("level")) || 1;
 let selectedTube = null;
+let tubes = [];
+
+function startLevel(level) {
+  // Sample tubes for testing (replace with real level generator)
+  tubes = [
+    ["red", "blue", "green", "green"],
+    ["blue", "red", "green", "blue"],
+    ["red", "blue", "red"],
+    [],
+    []
+  ];
+
+  renderTubes(tubes);
+}
 
 function renderTubes(tubes) {
   const container = document.getElementById("tubeContainer");
@@ -42,6 +54,19 @@ function renderTubes(tubes) {
   });
 }
 
+function pour(from, to) {
+  const fromIndex = parseInt(from.dataset.index);
+  const toIndex = parseInt(to.dataset.index);
+
+  if (!tubes[fromIndex].length) return false;
+  if (tubes[toIndex].length >= 4) return false;
+
+  const color = tubes[fromIndex].pop();
+  tubes[toIndex].push(color);
+  renderTubes(tubes);
+  return true;
+}
+
 function animatePour(from, to) {
   const anim = document.createElement('div');
   anim.classList.add('pour-effect');
@@ -66,4 +91,5 @@ function goHome() {
   window.location.href = "index.html";
 }
 
+// 🚀 Start the level
 startLevel(currentLevel);
