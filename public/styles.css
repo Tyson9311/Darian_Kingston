@@ -1,0 +1,57 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1603039614899-f01fba11f9c0');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3) blur(2px);
+  z-index: -1;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.neon-title {
+  font-size: 3rem;
+  color: #00f5ff;
+  text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 30px #00f5ff;
+}
+
+.neon-btn {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #00f5ff;
+  border-radius: 12px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #00f5ff;
+  box-shadow: 0 0 10px #00f5ff inset;
+  transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+  background-color: #00f5ff;
+  color: #000;
+  text-shadow: none;
+  box-shadow: 0 0 20px #00f5ff;
+}

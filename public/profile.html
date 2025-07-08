@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="profile.js"></script>
+</head>
+<body>
+  <div id="profile-container">
+    <h1>👤 My Profile</h1>
+    <div id="profile-pic"></div>
+    <p><strong>Name:</strong> <span id="profile-name"></span></p>
+    <p><strong>Level:</strong> <span id="profile-level"></span></p>
+    <p><strong>Score:</strong> <span id="profile-score"></span></p>
+    <p><strong>Rarity:</strong> <span id="profile-rarity"></span></p>
+    <p><strong>Gender:</strong> <span id="profile-gender"></span></p>
+
+    <div class="gender-buttons">
+      <button onclick="setGender('Male')">♂️ Male</button>
+      <button onclick="setGender('Female')">♀️ Female</button>
+      <button onclick="setGender('Non-binary')">⚧ Non-binary</button>
+    </div>
+
+    <div style="margin-top: 1rem">
+      <button onclick="goHome()">🏠 Home</button>
+    </div>
+  </div>
+</body>
+</html>
