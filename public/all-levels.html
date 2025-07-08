@@ -1,0 +1,41 @@
+<!-- 📄 all-levels.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Levels - MasterSort 251</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div id="game-screen">
+    <h2>🔓 Select Unlocked Level</h2>
+    <div id="levels-container" class="tube-container"></div>
+    <button onclick="goHome()">🏠 Back to Home</button>
+  </div>
+
+  <script>
+    const levelsContainer = document.getElementById('levels-container');
+    const unlockedLevel = parseInt(localStorage.getItem('unlockedLevel')) || 1;
+
+    for (let i = 1; i <= 251; i++) {
+      const levelBtn = document.createElement('button');
+      levelBtn.innerText = i;
+      levelBtn.style.width = '50px';
+      levelBtn.style.height = '50px';
+      levelBtn.style.borderRadius = '50%';
+      levelBtn.style.margin = '5px';
+      levelBtn.disabled = i > unlockedLevel;
+      levelBtn.onclick = () => {
+        window.location.href = `gameplay.html?level=${i}`;
+      };
+      levelsContainer.appendChild(levelBtn);
+    }
+
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
